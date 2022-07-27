@@ -1,3 +1,23 @@
 @charset 'utf-8';
 @import 'reset';
+// 폰트
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap');
 
+// 공통요소
+body {
+  font-family: 'Noto Sans KR', sans-serif;
+}
+.inner {
+  position: relative;
+  width: 980px;
+  margin: 0 auto;
+}
+
+.cgv-top-ad {
+  background: #0c0c14;
+  .btn-ad-close {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+  }
+}

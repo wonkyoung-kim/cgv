@@ -2,6 +2,7 @@
   v2.0 | 20110126
   License: none (public domain)
 */
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap");
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -50,4 +51,23 @@ q:before, q:after {
 table {
   border-collapse: collapse;
   border-spacing: 0;
+}
+
+body {
+  font-family: "Noto Sans KR", sans-serif;
+}
+
+.inner {
+  position: relative;
+  width: 980px;
+  margin: 0 auto;
+}
+
+.cgv-top-ad {
+  background: #0c0c14;
+}
+.cgv-top-ad .btn-ad-close {
+  position: absolute;
+  right: 10px;
+  top: 10px;
 }
