@@ -7,17 +7,72 @@
 body {
   font-family: 'Noto Sans KR', sans-serif;
 }
+img {
+  width: 100%;
+}
 .inner {
   position: relative;
   width: 980px;
   margin: 0 auto;
 }
 
+// 상단 광고
 .cgv-top-ad {
   background: #0c0c14;
   .btn-ad-close {
     position: absolute;
     right: 10px;
     top: 10px;
+  }
+}
+
+// header
+header {
+  display: flex;
+  align-items: center;
+  height: 113px;
+  .inner {
+    display: flex;
+    justify-content: space-between;
+  }
+  // 로고
+  h1 {
+    display: flex;
+    align-items: flex-end;
+    .logo {
+      display: inline-block;
+      width: 117px;
+      height: 53px;
+    }
+    span {
+      margin-bottom: 5px;
+      font-size: 16px;
+      letter-spacing: 0.313em;
+      color: #666;
+    }
+  }
+  // 마이메뉴
+  .my-menu {
+    display: flex;
+    align-items: center;
+    ul {
+      li {
+        display: inline-block;
+        margin-left: 44px;
+        a {
+          img {
+            display: block;
+            width: 36px;
+            height: 36px;
+            margin: 0 auto;
+          }
+          span {
+            display: block;
+            font-size: 13px;
+            color: #666;
+          }
+        }
+      }
+    }
   }
 }

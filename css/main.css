@@ -53,8 +53,16 @@ table {
   border-spacing: 0;
 }
 
+a {
+  text-decoration: none;
+}
+
 body {
   font-family: "Noto Sans KR", sans-serif;
+}
+
+img {
+  width: 100%;
 }
 
 .inner {
@@ -70,4 +78,48 @@ body {
   position: absolute;
   right: 10px;
   top: 10px;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  height: 113px;
+}
+header .inner {
+  display: flex;
+  justify-content: space-between;
+}
+header h1 {
+  display: flex;
+  align-items: flex-end;
+}
+header h1 .logo {
+  display: inline-block;
+  width: 117px;
+  height: 53px;
+}
+header h1 span {
+  margin-bottom: 5px;
+  font-size: 16px;
+  letter-spacing: 0.313em;
+  color: #666;
+}
+header .my-menu {
+  display: flex;
+  align-items: center;
+}
+header .my-menu ul li {
+  display: inline-block;
+  margin-left: 44px;
+}
+header .my-menu ul li a img {
+  display: block;
+  width: 36px;
+  height: 36px;
+  margin: 0 auto;
+}
+header .my-menu ul li a span {
+  display: block;
+  font-size: 13px;
+  color: #666;
 }
