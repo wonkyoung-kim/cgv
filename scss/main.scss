@@ -6,6 +6,7 @@
 
 // 공통요소
 body {
+  counter-reset: section;
   color: $sub-color;
   font-family: 'Noto Sans KR', sans-serif;
 }
@@ -177,7 +178,7 @@ img {
 .movie-video {
   height: 497px;
   background: #000;
-  .movie-video-wrap {
+  .movie-video-cont {
     height: 100%;
     &::before {
       content: '';
@@ -210,24 +211,13 @@ img {
     .button-group {
       display: flex;
       .detail-view {
-        position: relative;
         height: 30px;
         padding: 0 30px 0 18px;
-        line-height: 30px;
+        line-height: 31px;
         border-radius: 15px;
         font-size: 14px;
         color: #343434;
-        background: rgba(255,255,255,0.8);
-        &::after {
-          content: '';
-          position: absolute;
-          right: 11px;
-          top: 8px;
-          width: 8px;
-          height: 13px;
-          background-image: url('../images/arrowR_8x13.png');
-          background-size: cover;
-        }
+        background: rgba(255,255,255,0.8) url("../images/arrowR_8x13.png") right 12px top 7px/8px 13px no-repeat;
       }
       .play, .sound {
         width: 30px;
@@ -243,6 +233,189 @@ img {
       }
       .sound {
         background: url(../images/soundOff.png) 6px 6px/16px no-repeat;
+      }
+    }
+  }
+}
+
+// movie-chart
+.movie-chart {
+  .tab-container {
+    padding: 50px 30px 60px;
+    .tab-button-area {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 20px;
+      .tap-button {
+        display: flex;
+        a {
+          position: relative;
+          margin-right: 32px;
+          font-size: 26px;
+          color: $text-color-gray;
+          &::after {
+            content: '';
+            position: absolute;
+            right: -16px;
+            top: 50%;
+            transform: translateY(-50%);
+            display: inline-block;
+            width: 1px;
+            height: 16px;
+            margin-left: 18px;
+            background: #d8d8d8;
+          }
+          &:last-child {
+            &::after {
+              content: none;
+            }
+          }
+          &.on {
+            font-weight: 700;
+            color: $sub-color;
+          }
+        }
+      }
+      .all-view {
+        height: 30px;
+        line-height: 30px;
+        padding: 0 32px 0 15px;
+        border: 1px solid #e2e2e2;
+        border-radius: 15px;
+        font-size: 14px;
+        background: url("../images/arrowR_8x13.png") right 10px center/8px 13px no-repeat;
+      }
+    }
+    .tab-slide-cont {
+      position: relative;
+      .movie-chart-list {
+        overflow: hidden;
+        ul {
+          white-space: nowrap;
+          .poster {
+            display: inline-block;
+            width: 170px;
+            margin-right: 14px;
+            .poster-image {
+              position: relative;
+              overflow: hidden;
+              width: 100%;
+              height: 234px;
+              margin-bottom: 14px;
+              border-radius: 10px;
+              &::before {
+                content: '';
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.09) 35%, rgba(0, 0, 0, 0.85));
+              }
+              &::after {
+                content: counter(section);
+                counter-increment: section;
+                position: absolute;
+                left: 9px;
+                bottom: -4px;
+                font-size: 50px;
+                font-style: italic;
+                color: #fff;
+              }
+              &:hover {
+                .poster-button {
+                  opacity: 1;
+                }
+              }
+              .age {
+                position: absolute;
+                right: 6px;
+                top: 7px;
+                width: 22px;
+                height: 22px;
+              }
+              .poster-button {
+                position: absolute;
+                left: 0;
+                top: 0;
+                z-index: 10;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                width: 100%;
+                height: 100%;
+                opacity: 0;
+                background: rgba(0,0,0,0.5);
+                button {
+                  width: 130px;
+                  height: 35px;
+                  line-height: 35px;
+                  margin-bottom: 5px;
+                  border-radius: 5px;
+                  background: #e2e2e2;
+                  &.ticketing {
+                    background: $main-color;
+                    color: #fff;
+                  }
+                  &:hover {
+                    opacity: 0.8;
+                  }
+                  &:last-child {
+                    margin-bottom: 0;
+                  }
+                }
+              }
+            }
+            .poster-info {
+              .title {
+                margin-bottom: 10px;
+                text-align: center;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                font: {
+                  size: 18px;
+                  weight: 500;
+                }
+              }
+              span {
+                margin-left: 16px;
+                font-size: 14px;
+                color: $text-color-black;
+                img {
+                  width: 16px;
+                  height: 16px;
+                  vertical-align: top;
+                }
+                &:nth-child(2) {
+                  margin-left: 0;
+                }
+              }
+            }
+          }
+        }
+      }
+      .prev, .next {
+        display: inline-block;
+        position: absolute;
+        left: -20px;
+        top: calc(50% - 26px);
+        transform: translateY(-50%);
+        z-index: 20;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        box-shadow: 3px 3px 10px -4px #555;
+        background: rgba(255,255,255,0.8) url('../images/arrowR_8x13.png') 17px center/9px 13px no-repeat;
+        font-size: 0;
+      }
+      .prev {
+        transform: translateY(-50%) rotate(-180deg);
+      }
+      .next {
+        left: unset;
+        right: -20px;
       }
     }
   }
