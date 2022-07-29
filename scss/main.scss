@@ -757,3 +757,81 @@ img {
     height: 100%;
   }
 }
+
+// footer 
+footer {
+  padding-bottom: 14px;
+  .policy-list {
+    display: flex;
+    justify-content: space-between;
+    padding: 23px 0;
+    border-bottom: 1px solid #ebebeb;
+    a {
+      font: {
+        size: 13px;
+        weight: 500;
+      }
+      color: $text-color-gray;
+      strong {
+        text-decoration: underline;
+        font-weight: 700;
+        color: $sub-color;
+      }
+    }
+  }
+  .company-info {
+    padding: 23px 0;
+    font-size: 12px;
+    color: $text-color-gray;
+    line-height: 1.6;
+    dl {
+      display: flex;
+      flex-wrap: wrap;
+      width: 580px;
+      dt {
+        &::before {
+          content: "·";
+          margin: 0 4px;
+        }
+        &::after {
+          content: " :";
+          margin-right: 4px;
+        }
+        &:first-child, &:nth-child(7) {
+          &::before {
+            content: none;
+          }
+        }
+      }
+      dd {
+        a {
+          text-decoration: underline;
+        }
+      }
+    }
+    .familysite {
+      position: absolute;
+      right: 0;
+      bottom: 23px;
+      select {
+        width: 174px;
+        height: 34px;
+        padding: 0 5px;
+        border: 1px solid #d8d8d8;
+        font-size: 12px;
+        color: $text-color-gray;
+      }
+      .btn_familysite {
+        display: inline-block;
+        width: 36px;
+        height: 34px;
+        line-height: 34px;
+        text-align: center;
+        vertical-align: bottom;
+        font-size: 14px;
+        color: #fff;
+        background: #9e9e9e;
+      }
+    }
+  }
+}
