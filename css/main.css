@@ -55,6 +55,7 @@ table {
 
 a {
   text-decoration: none;
+  color: #222;
 }
 
 button {
@@ -70,6 +71,15 @@ body {
   font-family: "Noto Sans KR", sans-serif;
 }
 
+.ir-so {
+  position: absolute;
+  overflow: hidden;
+  width: 0;
+  height: 0;
+  line-height: 0;
+  text-indent: -9999px;
+}
+
 img {
   width: 100%;
 }
@@ -79,6 +89,51 @@ img {
   width: 980px;
   height: 100%;
   margin: 0 auto;
+}
+
+.all-view {
+  height: 30px;
+  line-height: 30px;
+  padding: 0 32px 0 15px;
+  border: 1px solid #e2e2e2;
+  border-radius: 15px;
+  font-size: 14px;
+  background: url("../images/arrowR_8x13.png") right 10px center/8px 13px no-repeat;
+}
+
+.slide-contents {
+  position: relative;
+}
+.slide-contents .slide-list {
+  overflow: hidden;
+}
+.slide-contents .slide-list ul {
+  white-space: nowrap;
+  font-size: 0;
+}
+.slide-contents .slide-list ul li {
+  display: inline-block;
+}
+.slide-contents .prev, .slide-contents .next {
+  display: inline-block;
+  position: absolute;
+  left: -20px;
+  top: calc(50% - 26px);
+  transform: translateY(-50%);
+  z-index: 20;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  box-shadow: 3px 3px 10px -4px #555;
+  background: rgba(255, 255, 255, 0.8) url("../images/arrowR_8x13.png") 17px center/9px 13px no-repeat;
+  font-size: 0;
+}
+.slide-contents .prev {
+  transform: translateY(-50%) rotate(-180deg);
+}
+.slide-contents .next {
+  left: unset;
+  right: -20px;
 }
 
 .cgv-top-ad {
@@ -236,6 +291,10 @@ img {
   height: 100%;
   background-image: linear-gradient(to right, #000 0%, rgba(0, 0, 0, 0.25) 25%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.25) 75%, #000 100%);
 }
+.movie-video .movie-video-cont iframe {
+  width: 100%;
+  height: 100%;
+}
 .movie-video .movie-video-cont .movie-info {
   position: absolute;
   left: 0;
@@ -263,7 +322,7 @@ img {
   border-radius: 15px;
   font-size: 14px;
   color: #343434;
-  background: rgba(255, 255, 255, 0.8) url("../images/arrowR_8x13.png") right 12px top 7px/8px 13px no-repeat;
+  background: rgba(255, 255, 255, 0.8) url("../images/arrowR_8x13.png") right 12px top 8px/8px 13px no-repeat;
 }
 .movie-video .movie-video-cont .button-group .play, .movie-video .movie-video-cont .button-group .sound {
   width: 30px;
@@ -282,23 +341,21 @@ img {
 }
 
 .movie-chart .tab-container {
-  padding: 50px 30px 60px;
+  padding: 50px 0 60px;
 }
-.movie-chart .tab-container .tab-button-area {
+.movie-chart .tab-container .tab-button {
   display: flex;
   justify-content: space-between;
   margin-bottom: 20px;
 }
-.movie-chart .tab-container .tab-button-area .tap-button {
+.movie-chart .tab-container .tab-button .title {
   display: flex;
 }
-.movie-chart .tab-container .tab-button-area .tap-button a {
+.movie-chart .tab-container .tab-button .title h3 {
   position: relative;
   margin-right: 32px;
-  font-size: 26px;
-  color: #666;
 }
-.movie-chart .tab-container .tab-button-area .tap-button a::after {
+.movie-chart .tab-container .tab-button .title h3::after {
   content: "";
   position: absolute;
   right: -16px;
@@ -310,37 +367,23 @@ img {
   margin-left: 18px;
   background: #d8d8d8;
 }
-.movie-chart .tab-container .tab-button-area .tap-button a:last-child::after {
+.movie-chart .tab-container .tab-button .title h3:last-child::after {
   content: none;
 }
-.movie-chart .tab-container .tab-button-area .tap-button a.on {
+.movie-chart .tab-container .tab-button .title h3 a {
+  font-size: 26px;
+  color: #666;
+}
+.movie-chart .tab-container .tab-button .title h3 a.on {
   font-weight: 700;
   color: #222;
 }
-.movie-chart .tab-container .tab-button-area .all-view {
-  height: 30px;
-  line-height: 30px;
-  padding: 0 32px 0 15px;
-  border: 1px solid #e2e2e2;
-  border-radius: 15px;
-  font-size: 14px;
-  background: url("../images/arrowR_8x13.png") right 10px center/8px 13px no-repeat;
-}
-.movie-chart .tab-container .tab-slide-cont {
-  position: relative;
-}
-.movie-chart .tab-container .tab-slide-cont .movie-chart-list {
-  overflow: hidden;
-}
-.movie-chart .tab-container .tab-slide-cont .movie-chart-list ul {
-  white-space: nowrap;
-}
-.movie-chart .tab-container .tab-slide-cont .movie-chart-list ul .poster {
+.movie-chart .tab-container li {
   display: inline-block;
   width: 170px;
-  margin-right: 14px;
+  margin-right: 32px;
 }
-.movie-chart .tab-container .tab-slide-cont .movie-chart-list ul .poster .poster-image {
+.movie-chart .tab-container li .poster-image {
   position: relative;
   overflow: hidden;
   width: 100%;
@@ -348,7 +391,7 @@ img {
   margin-bottom: 14px;
   border-radius: 10px;
 }
-.movie-chart .tab-container .tab-slide-cont .movie-chart-list ul .poster .poster-image::before {
+.movie-chart .tab-container li .poster-image::before {
   content: "";
   position: absolute;
   left: 0;
@@ -357,7 +400,7 @@ img {
   height: 100%;
   background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.09) 35%, rgba(0, 0, 0, 0.85));
 }
-.movie-chart .tab-container .tab-slide-cont .movie-chart-list ul .poster .poster-image::after {
+.movie-chart .tab-container li .poster-image::after {
   content: counter(section);
   counter-increment: section;
   position: absolute;
@@ -367,17 +410,17 @@ img {
   font-style: italic;
   color: #fff;
 }
-.movie-chart .tab-container .tab-slide-cont .movie-chart-list ul .poster .poster-image:hover .poster-button {
+.movie-chart .tab-container li .poster-image:hover .poster-button {
   opacity: 1;
 }
-.movie-chart .tab-container .tab-slide-cont .movie-chart-list ul .poster .poster-image .age {
+.movie-chart .tab-container li .poster-image .age {
   position: absolute;
   right: 6px;
   top: 7px;
   width: 22px;
   height: 22px;
 }
-.movie-chart .tab-container .tab-slide-cont .movie-chart-list ul .poster .poster-image .poster-button {
+.movie-chart .tab-container li .poster-image .poster-button {
   position: absolute;
   left: 0;
   top: 0;
@@ -391,7 +434,7 @@ img {
   opacity: 0;
   background: rgba(0, 0, 0, 0.5);
 }
-.movie-chart .tab-container .tab-slide-cont .movie-chart-list ul .poster .poster-image .poster-button button {
+.movie-chart .tab-container li .poster-image .poster-button button {
   width: 130px;
   height: 35px;
   line-height: 35px;
@@ -399,17 +442,17 @@ img {
   border-radius: 5px;
   background: #e2e2e2;
 }
-.movie-chart .tab-container .tab-slide-cont .movie-chart-list ul .poster .poster-image .poster-button button.ticketing {
+.movie-chart .tab-container li .poster-image .poster-button button.ticketing {
   background: #fb4357;
   color: #fff;
 }
-.movie-chart .tab-container .tab-slide-cont .movie-chart-list ul .poster .poster-image .poster-button button:hover {
+.movie-chart .tab-container li .poster-image .poster-button button:hover {
   opacity: 0.8;
 }
-.movie-chart .tab-container .tab-slide-cont .movie-chart-list ul .poster .poster-image .poster-button button:last-child {
+.movie-chart .tab-container li .poster-image .poster-button button:last-child {
   margin-bottom: 0;
 }
-.movie-chart .tab-container .tab-slide-cont .movie-chart-list ul .poster .poster-info .title {
+.movie-chart .tab-container li .poster-info .title {
   margin-bottom: 10px;
   text-align: center;
   overflow: hidden;
@@ -418,37 +461,51 @@ img {
   font-size: 18px;
   font-weight: 500;
 }
-.movie-chart .tab-container .tab-slide-cont .movie-chart-list ul .poster .poster-info span {
+.movie-chart .tab-container li .poster-info span {
   margin-left: 16px;
   font-size: 14px;
   color: #444;
 }
-.movie-chart .tab-container .tab-slide-cont .movie-chart-list ul .poster .poster-info span img {
+.movie-chart .tab-container li .poster-info span img {
   width: 16px;
   height: 16px;
   vertical-align: top;
 }
-.movie-chart .tab-container .tab-slide-cont .movie-chart-list ul .poster .poster-info span:nth-child(2) {
+.movie-chart .tab-container li .poster-info span:nth-child(2) {
   margin-left: 0;
 }
-.movie-chart .tab-container .tab-slide-cont .prev, .movie-chart .tab-container .tab-slide-cont .next {
-  display: inline-block;
-  position: absolute;
-  left: -20px;
-  top: calc(50% - 26px);
-  transform: translateY(-50%);
-  z-index: 20;
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  box-shadow: 3px 3px 10px -4px #555;
-  background: rgba(255, 255, 255, 0.8) url("../images/arrowR_8x13.png") 17px center/9px 13px no-repeat;
-  font-size: 0;
+
+.event {
+  padding: 60px 0 6px;
 }
-.movie-chart .tab-container .tab-slide-cont .prev {
-  transform: translateY(-50%) rotate(-180deg);
+.event .title {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
 }
-.movie-chart .tab-container .tab-slide-cont .next {
-  left: unset;
-  right: -20px;
+.event .title h3 {
+  font-size: 26px;
+  font-weight: 700;
+}
+.event li {
+  width: 310px;
+  margin-right: 24px;
+}
+.event li .event-image {
+  overflow: hidden;
+  height: 207px;
+  margin-bottom: 16px;
+  border-radius: 10px;
+}
+.event li .event-info {
+  line-height: 1.4;
+}
+.event li .event-info h4 {
+  font-size: 18px;
+  font-weight: 500;
+}
+.event li .event-info .date {
+  margin-top: 4px;
+  font-size: 14px;
+  color: #666;
 }
