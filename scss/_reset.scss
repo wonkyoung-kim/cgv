@@ -47,11 +47,13 @@ table {
 	border-spacing: 0;
 }
 a {
+	font-family: $font-400;
 	text-decoration: none;
 	color: $sub-color;
 }
 button {
 	border: none;
+	font-family: $font-400;
 	background: none;
 	padding: 0;
 	cursor: pointer;
