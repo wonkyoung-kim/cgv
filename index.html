@@ -21,7 +21,7 @@
   <!-- header -->
   <header class="header">
     <div class="inner">
-      <div class="header-contents">
+      <div class="header-wrap">
         <h1>
           <a href="#" class="logo">
             <img src="/images/logo.png" alt="cgv">
@@ -137,14 +137,18 @@
     <h2 class="ir-so">무비예고편동영상</h2>
     <div class="inner">
       <div class="movie-video-cont">
-        <iframe src="https://www.youtube.com/embed/glm8m7JiY_M" title="리미트 (Limit, 2022) 티저 예고편"></iframe>
+        <video autoplay muted>
+          <source src="https://adimg.cgv.co.kr/images/202207/limit/0803_limit_1080x608.mp4">
+        </video>
         <div class="movie-info">
           <h4>리미트</h4>
           <p>반드시 찾는다!<br />8월17일 대개봉</p>
-          <div class="button-group">
+          <div class="controll-btn">
             <button class="detail-view">상세보기</button>
             <button class="play">재생</button>
-            <button class="sound">사운드</button>
+            <button class="pause">일시정지</button>
+            <button class="sound-off">사운드끔</button>
+            <button class="sound-on">사운드켬</button>
           </div>
         </div>
       </div>   
@@ -158,13 +162,12 @@
       <div class="tab-container">
         <div class="tab-button">
           <div class="title">
-            <h3><a href="#" class="on">무비차트</a></h3>
-            <h3><a href="#">상영예정작</a></h3>
+            <h3><a href="#" class="on" data-id="0">무비차트</a></h3>
+            <h3><a href="#" data-id="1">상영예정작</a></h3>
           </div>
           <button class="all-view">전체보기</button>
         </div>
         <div class="slide-contents">
-          <a href="#" class="prev">이전</a>
           <div class="slide-list movie-chart-list">
             <ul>
               <li>
@@ -267,9 +270,716 @@
                   <span>예매율 45.5%</span>
                 </div>
               </li>
+              <li>
+                <div class="poster-image">
+                  <img src="/images/poster2.jpg" alt="탑건-매버릭">
+                  <span class="age">
+                    <img src="/images/grade-12.png" alt="12세">
+                  </span>
+                  <div class="poster-button">
+                    <button>상세보기</button>
+                    <button class="ticketing">예매하기</button>
+                  </div>
+                </div>
+                <div class="poster-info">
+                  <h4 class="title">탑건-매버릭</h4>
+                  <span class="egg">
+                    <img src="/images/eggGoldenegggreat.png" alt="골든에그">
+                    95%
+                  </span>
+                  <span>예매율 45.5%</span>
+                </div>
+              </li>
+              <li>
+                <div class="poster-image">
+                  <img src="/images/poster2.jpg" alt="탑건-매버릭">
+                  <span class="age">
+                    <img src="/images/grade-12.png" alt="12세">
+                  </span>
+                  <div class="poster-button">
+                    <button>상세보기</button>
+                    <button class="ticketing">예매하기</button>
+                  </div>
+                </div>
+                <div class="poster-info">
+                  <h4 class="title">탑건-매버릭</h4>
+                  <span class="egg">
+                    <img src="/images/eggGoldenegggreat.png" alt="골든에그">
+                    95%
+                  </span>
+                  <span>예매율 45.5%</span>
+                </div>
+              </li>
+              <li>
+                <div class="poster-image">
+                  <img src="/images/poster2.jpg" alt="탑건-매버릭">
+                  <span class="age">
+                    <img src="/images/grade-12.png" alt="12세">
+                  </span>
+                  <div class="poster-button">
+                    <button>상세보기</button>
+                    <button class="ticketing">예매하기</button>
+                  </div>
+                </div>
+                <div class="poster-info">
+                  <h4 class="title">탑건-매버릭</h4>
+                  <span class="egg">
+                    <img src="/images/eggGoldenegggreat.png" alt="골든에그">
+                    95%
+                  </span>
+                  <span>예매율 45.5%</span>
+                </div>
+              </li>
+              <li>
+                <div class="poster-image">
+                  <img src="/images/poster2.jpg" alt="탑건-매버릭">
+                  <span class="age">
+                    <img src="/images/grade-12.png" alt="12세">
+                  </span>
+                  <div class="poster-button">
+                    <button>상세보기</button>
+                    <button class="ticketing">예매하기</button>
+                  </div>
+                </div>
+                <div class="poster-info">
+                  <h4 class="title">탑건-매버릭</h4>
+                  <span class="egg">
+                    <img src="/images/eggGoldenegggreat.png" alt="골든에그">
+                    95%
+                  </span>
+                  <span>예매율 45.5%</span>
+                </div>
+              </li>
+              <li>
+                <div class="poster-image">
+                  <img src="/images/poster2.jpg" alt="탑건-매버릭">
+                  <span class="age">
+                    <img src="/images/grade-12.png" alt="12세">
+                  </span>
+                  <div class="poster-button">
+                    <button>상세보기</button>
+                    <button class="ticketing">예매하기</button>
+                  </div>
+                </div>
+                <div class="poster-info">
+                  <h4 class="title">탑건-매버릭</h4>
+                  <span class="egg">
+                    <img src="/images/eggGoldenegggreat.png" alt="골든에그">
+                    95%
+                  </span>
+                  <span>예매율 45.5%</span>
+                </div>
+              </li>
+              <li>
+                <div class="poster-image">
+                  <img src="/images/poster.jpg" alt="탑건-매버릭">
+                  <span class="age">
+                    <img src="/images/grade-12.png" alt="12세">
+                  </span>
+                  <div class="poster-button">
+                    <button>상세보기</button>
+                    <button class="ticketing">예매하기</button>
+                  </div>
+                </div>
+                <div class="poster-info">
+                  <h4 class="title">탑건-매버릭</h4>
+                  <span class="egg">
+                    <img src="/images/eggGoldenegggreat.png" alt="골든에그">
+                    95%
+                  </span>
+                  <span>예매율 45.5%</span>
+                </div>
+              </li>
+              <li>
+                <div class="poster-image">
+                  <img src="/images/poster.jpg" alt="탑건-매버릭">
+                  <span class="age">
+                    <img src="/images/grade-12.png" alt="12세">
+                  </span>
+                  <div class="poster-button">
+                    <button>상세보기</button>
+                    <button class="ticketing">예매하기</button>
+                  </div>
+                </div>
+                <div class="poster-info">
+                  <h4 class="title">탑건-매버릭</h4>
+                  <span class="egg">
+                    <img src="/images/eggGoldenegggreat.png" alt="골든에그">
+                    95%
+                  </span>
+                  <span>예매율 45.5%</span>
+                </div>
+              </li>
+              <li>
+                <div class="poster-image">
+                  <img src="/images/poster.jpg" alt="탑건-매버릭">
+                  <span class="age">
+                    <img src="/images/grade-12.png" alt="12세">
+                  </span>
+                  <div class="poster-button">
+                    <button>상세보기</button>
+                    <button class="ticketing">예매하기</button>
+                  </div>
+                </div>
+                <div class="poster-info">
+                  <h4 class="title">탑건-매버릭</h4>
+                  <span class="egg">
+                    <img src="/images/eggGoldenegggreat.png" alt="골든에그">
+                    95%
+                  </span>
+                  <span>예매율 45.5%</span>
+                </div>
+              </li>
+              <li>
+                <div class="poster-image">
+                  <img src="/images/poster.jpg" alt="탑건-매버릭">
+                  <span class="age">
+                    <img src="/images/grade-12.png" alt="12세">
+                  </span>
+                  <div class="poster-button">
+                    <button>상세보기</button>
+                    <button class="ticketing">예매하기</button>
+                  </div>
+                </div>
+                <div class="poster-info">
+                  <h4 class="title">탑건-매버릭</h4>
+                  <span class="egg">
+                    <img src="/images/eggGoldenegggreat.png" alt="골든에그">
+                    95%
+                  </span>
+                  <span>예매율 45.5%</span>
+                </div>
+              </li>
+              <li>
+                <div class="poster-image">
+                  <img src="/images/poster.jpg" alt="탑건-매버릭">
+                  <span class="age">
+                    <img src="/images/grade-12.png" alt="12세">
+                  </span>
+                  <div class="poster-button">
+                    <button>상세보기</button>
+                    <button class="ticketing">예매하기</button>
+                  </div>
+                </div>
+                <div class="poster-info">
+                  <h4 class="title">탑건-매버릭</h4>
+                  <span class="egg">
+                    <img src="/images/eggGoldenegggreat.png" alt="골든에그">
+                    95%
+                  </span>
+                  <span>예매율 45.5%</span>
+                </div>
+              </li>
+              <li>
+                <div class="poster-image">
+                  <img src="/images/poster2.jpg" alt="탑건-매버릭">
+                  <span class="age">
+                    <img src="/images/grade-12.png" alt="12세">
+                  </span>
+                  <div class="poster-button">
+                    <button>상세보기</button>
+                    <button class="ticketing">예매하기</button>
+                  </div>
+                </div>
+                <div class="poster-info">
+                  <h4 class="title">탑건-매버릭</h4>
+                  <span class="egg">
+                    <img src="/images/eggGoldenegggreat.png" alt="골든에그">
+                    95%
+                  </span>
+                  <span>예매율 45.5%</span>
+                </div>
+              </li>
+              <li>
+                <div class="poster-image">
+                  <img src="/images/poster2.jpg" alt="탑건-매버릭">
+                  <span class="age">
+                    <img src="/images/grade-12.png" alt="12세">
+                  </span>
+                  <div class="poster-button">
+                    <button>상세보기</button>
+                    <button class="ticketing">예매하기</button>
+                  </div>
+                </div>
+                <div class="poster-info">
+                  <h4 class="title">탑건-매버릭</h4>
+                  <span class="egg">
+                    <img src="/images/eggGoldenegggreat.png" alt="골든에그">
+                    95%
+                  </span>
+                  <span>예매율 45.5%</span>
+                </div>
+              </li>
+              <li>
+                <div class="poster-image">
+                  <img src="/images/poster2.jpg" alt="탑건-매버릭">
+                  <span class="age">
+                    <img src="/images/grade-12.png" alt="12세">
+                  </span>
+                  <div class="poster-button">
+                    <button>상세보기</button>
+                    <button class="ticketing">예매하기</button>
+                  </div>
+                </div>
+                <div class="poster-info">
+                  <h4 class="title">탑건-매버릭</h4>
+                  <span class="egg">
+                    <img src="/images/eggGoldenegggreat.png" alt="골든에그">
+                    95%
+                  </span>
+                  <span>예매율 45.5%</span>
+                </div>
+              </li>
+              <li>
+                <div class="poster-image">
+                  <img src="/images/poster2.jpg" alt="탑건-매버릭">
+                  <span class="age">
+                    <img src="/images/grade-12.png" alt="12세">
+                  </span>
+                  <div class="poster-button">
+                    <button>상세보기</button>
+                    <button class="ticketing">예매하기</button>
+                  </div>
+                </div>
+                <div class="poster-info">
+                  <h4 class="title">탑건-매버릭</h4>
+                  <span class="egg">
+                    <img src="/images/eggGoldenegggreat.png" alt="골든에그">
+                    95%
+                  </span>
+                  <span>예매율 45.5%</span>
+                </div>
+              </li>
+              <li>
+                <div class="poster-image">
+                  <img src="/images/poster2.jpg" alt="탑건-매버릭">
+                  <span class="age">
+                    <img src="/images/grade-12.png" alt="12세">
+                  </span>
+                  <div class="poster-button">
+                    <button>상세보기</button>
+                    <button class="ticketing">예매하기</button>
+                  </div>
+                </div>
+                <div class="poster-info">
+                  <h4 class="title">탑건-매버릭</h4>
+                  <span class="egg">
+                    <img src="/images/eggGoldenegggreat.png" alt="골든에그">
+                    95%
+                  </span>
+                  <span>예매율 45.5%</span>
+                </div>
+              </li>
             </ul>
+            <a href="#" class="prev">이전</a>
+            <a href="#" class="next">다음</a>
           </div>
-          <a href="#" class="next">다음</a>
+          <div class="slide-list comming-movie-list">
+            <ul>
+              <li>
+                <div class="poster-image">
+                  <img src="/images/poster2.jpg" alt="탑건-매버릭">
+                  <span class="age">
+                    <img src="/images/grade-12.png" alt="12세">
+                  </span>
+                  <div class="poster-button">
+                    <button>상세보기</button>
+                    <button class="ticketing">예매하기</button>
+                  </div>
+                </div>
+                <div class="poster-info">
+                  <h4 class="title">탑건-매버릭</h4>
+                  <span class="egg">
+                    <img src="/images/eggGoldenegggreat.png" alt="골든에그">
+                    95%
+                  </span>
+                  <span>예매율 45.5%</span>
+                </div>
+              </li>
+              <li>
+                <div class="poster-image">
+                  <img src="/images/poster2.jpg" alt="탑건-매버릭">
+                  <span class="age">
+                    <img src="/images/grade-12.png" alt="12세">
+                  </span>
+                  <div class="poster-button">
+                    <button>상세보기</button>
+                    <button class="ticketing">예매하기</button>
+                  </div>
+                </div>
+                <div class="poster-info">
+                  <h4 class="title">탑건-매버릭</h4>
+                  <span class="egg">
+                    <img src="/images/eggGoldenegggreat.png" alt="골든에그">
+                    95%
+                  </span>
+                  <span>예매율 45.5%</span>
+                </div>
+              </li>
+              <li>
+                <div class="poster-image">
+                  <img src="/images/poster2.jpg" alt="탑건-매버릭">
+                  <span class="age">
+                    <img src="/images/grade-12.png" alt="12세">
+                  </span>
+                  <div class="poster-button">
+                    <button>상세보기</button>
+                    <button class="ticketing">예매하기</button>
+                  </div>
+                </div>
+                <div class="poster-info">
+                  <h4 class="title">탑건-매버릭</h4>
+                  <span class="egg">
+                    <img src="/images/eggGoldenegggreat.png" alt="골든에그">
+                    95%
+                  </span>
+                  <span>예매율 45.5%</span>
+                </div>
+              </li>
+              <li>
+                <div class="poster-image">
+                  <img src="/images/poster2.jpg" alt="탑건-매버릭">
+                  <span class="age">
+                    <img src="/images/grade-12.png" alt="12세">
+                  </span>
+                  <div class="poster-button">
+                    <button>상세보기</button>
+                    <button class="ticketing">예매하기</button>
+                  </div>
+                </div>
+                <div class="poster-info">
+                  <h4 class="title">탑건-매버릭</h4>
+                  <span class="egg">
+                    <img src="/images/eggGoldenegggreat.png" alt="골든에그">
+                    95%
+                  </span>
+                  <span>예매율 45.5%</span>
+                </div>
+              </li>
+              <li>
+                <div class="poster-image">
+                  <img src="/images/poster2.jpg" alt="탑건-매버릭">
+                  <span class="age">
+                    <img src="/images/grade-12.png" alt="12세">
+                  </span>
+                  <div class="poster-button">
+                    <button>상세보기</button>
+                    <button class="ticketing">예매하기</button>
+                  </div>
+                </div>
+                <div class="poster-info">
+                  <h4 class="title">탑건-매버릭</h4>
+                  <span class="egg">
+                    <img src="/images/eggGoldenegggreat.png" alt="골든에그">
+                    95%
+                  </span>
+                  <span>예매율 45.5%</span>
+                </div>
+              </li>
+              <li>
+                <div class="poster-image">
+                  <img src="/images/poster.jpg" alt="탑건-매버릭">
+                  <span class="age">
+                    <img src="/images/grade-12.png" alt="12세">
+                  </span>
+                  <div class="poster-button">
+                    <button>상세보기</button>
+                    <button class="ticketing">예매하기</button>
+                  </div>
+                </div>
+                <div class="poster-info">
+                  <h4 class="title">탑건-매버릭</h4>
+                  <span class="egg">
+                    <img src="/images/eggGoldenegggreat.png" alt="골든에그">
+                    95%
+                  </span>
+                  <span>예매율 45.5%</span>
+                </div>
+              </li>
+              <li>
+                <div class="poster-image">
+                  <img src="/images/poster.jpg" alt="탑건-매버릭">
+                  <span class="age">
+                    <img src="/images/grade-12.png" alt="12세">
+                  </span>
+                  <div class="poster-button">
+                    <button>상세보기</button>
+                    <button class="ticketing">예매하기</button>
+                  </div>
+                </div>
+                <div class="poster-info">
+                  <h4 class="title">탑건-매버릭</h4>
+                  <span class="egg">
+                    <img src="/images/eggGoldenegggreat.png" alt="골든에그">
+                    95%
+                  </span>
+                  <span>예매율 45.5%</span>
+                </div>
+              </li>
+              <li>
+                <div class="poster-image">
+                  <img src="/images/poster.jpg" alt="탑건-매버릭">
+                  <span class="age">
+                    <img src="/images/grade-12.png" alt="12세">
+                  </span>
+                  <div class="poster-button">
+                    <button>상세보기</button>
+                    <button class="ticketing">예매하기</button>
+                  </div>
+                </div>
+                <div class="poster-info">
+                  <h4 class="title">탑건-매버릭</h4>
+                  <span class="egg">
+                    <img src="/images/eggGoldenegggreat.png" alt="골든에그">
+                    95%
+                  </span>
+                  <span>예매율 45.5%</span>
+                </div>
+              </li>
+              <li>
+                <div class="poster-image">
+                  <img src="/images/poster.jpg" alt="탑건-매버릭">
+                  <span class="age">
+                    <img src="/images/grade-12.png" alt="12세">
+                  </span>
+                  <div class="poster-button">
+                    <button>상세보기</button>
+                    <button class="ticketing">예매하기</button>
+                  </div>
+                </div>
+                <div class="poster-info">
+                  <h4 class="title">탑건-매버릭</h4>
+                  <span class="egg">
+                    <img src="/images/eggGoldenegggreat.png" alt="골든에그">
+                    95%
+                  </span>
+                  <span>예매율 45.5%</span>
+                </div>
+              </li>
+              <li>
+                <div class="poster-image">
+                  <img src="/images/poster.jpg" alt="탑건-매버릭">
+                  <span class="age">
+                    <img src="/images/grade-12.png" alt="12세">
+                  </span>
+                  <div class="poster-button">
+                    <button>상세보기</button>
+                    <button class="ticketing">예매하기</button>
+                  </div>
+                </div>
+                <div class="poster-info">
+                  <h4 class="title">탑건-매버릭</h4>
+                  <span class="egg">
+                    <img src="/images/eggGoldenegggreat.png" alt="골든에그">
+                    95%
+                  </span>
+                  <span>예매율 45.5%</span>
+                </div>
+              </li>
+              <li>
+                <div class="poster-image">
+                  <img src="/images/poster2.jpg" alt="탑건-매버릭">
+                  <span class="age">
+                    <img src="/images/grade-12.png" alt="12세">
+                  </span>
+                  <div class="poster-button">
+                    <button>상세보기</button>
+                    <button class="ticketing">예매하기</button>
+                  </div>
+                </div>
+                <div class="poster-info">
+                  <h4 class="title">탑건-매버릭</h4>
+                  <span class="egg">
+                    <img src="/images/eggGoldenegggreat.png" alt="골든에그">
+                    95%
+                  </span>
+                  <span>예매율 45.5%</span>
+                </div>
+              </li>
+              <li>
+                <div class="poster-image">
+                  <img src="/images/poster2.jpg" alt="탑건-매버릭">
+                  <span class="age">
+                    <img src="/images/grade-12.png" alt="12세">
+                  </span>
+                  <div class="poster-button">
+                    <button>상세보기</button>
+                    <button class="ticketing">예매하기</button>
+                  </div>
+                </div>
+                <div class="poster-info">
+                  <h4 class="title">탑건-매버릭</h4>
+                  <span class="egg">
+                    <img src="/images/eggGoldenegggreat.png" alt="골든에그">
+                    95%
+                  </span>
+                  <span>예매율 45.5%</span>
+                </div>
+              </li>
+              <li>
+                <div class="poster-image">
+                  <img src="/images/poster2.jpg" alt="탑건-매버릭">
+                  <span class="age">
+                    <img src="/images/grade-12.png" alt="12세">
+                  </span>
+                  <div class="poster-button">
+                    <button>상세보기</button>
+                    <button class="ticketing">예매하기</button>
+                  </div>
+                </div>
+                <div class="poster-info">
+                  <h4 class="title">탑건-매버릭</h4>
+                  <span class="egg">
+                    <img src="/images/eggGoldenegggreat.png" alt="골든에그">
+                    95%
+                  </span>
+                  <span>예매율 45.5%</span>
+                </div>
+              </li>
+              <li>
+                <div class="poster-image">
+                  <img src="/images/poster2.jpg" alt="탑건-매버릭">
+                  <span class="age">
+                    <img src="/images/grade-12.png" alt="12세">
+                  </span>
+                  <div class="poster-button">
+                    <button>상세보기</button>
+                    <button class="ticketing">예매하기</button>
+                  </div>
+                </div>
+                <div class="poster-info">
+                  <h4 class="title">탑건-매버릭</h4>
+                  <span class="egg">
+                    <img src="/images/eggGoldenegggreat.png" alt="골든에그">
+                    95%
+                  </span>
+                  <span>예매율 45.5%</span>
+                </div>
+              </li>
+              <li>
+                <div class="poster-image">
+                  <img src="/images/poster2.jpg" alt="탑건-매버릭">
+                  <span class="age">
+                    <img src="/images/grade-12.png" alt="12세">
+                  </span>
+                  <div class="poster-button">
+                    <button>상세보기</button>
+                    <button class="ticketing">예매하기</button>
+                  </div>
+                </div>
+                <div class="poster-info">
+                  <h4 class="title">탑건-매버릭</h4>
+                  <span class="egg">
+                    <img src="/images/eggGoldenegggreat.png" alt="골든에그">
+                    95%
+                  </span>
+                  <span>예매율 45.5%</span>
+                </div>
+              </li>
+              <li>
+                <div class="poster-image">
+                  <img src="/images/poster.jpg" alt="탑건-매버릭">
+                  <span class="age">
+                    <img src="/images/grade-12.png" alt="12세">
+                  </span>
+                  <div class="poster-button">
+                    <button>상세보기</button>
+                    <button class="ticketing">예매하기</button>
+                  </div>
+                </div>
+                <div class="poster-info">
+                  <h4 class="title">탑건-매버릭</h4>
+                  <span class="egg">
+                    <img src="/images/eggGoldenegggreat.png" alt="골든에그">
+                    95%
+                  </span>
+                  <span>예매율 45.5%</span>
+                </div>
+              </li>
+              <li>
+                <div class="poster-image">
+                  <img src="/images/poster.jpg" alt="탑건-매버릭">
+                  <span class="age">
+                    <img src="/images/grade-12.png" alt="12세">
+                  </span>
+                  <div class="poster-button">
+                    <button>상세보기</button>
+                    <button class="ticketing">예매하기</button>
+                  </div>
+                </div>
+                <div class="poster-info">
+                  <h4 class="title">탑건-매버릭</h4>
+                  <span class="egg">
+                    <img src="/images/eggGoldenegggreat.png" alt="골든에그">
+                    95%
+                  </span>
+                  <span>예매율 45.5%</span>
+                </div>
+              </li>
+              <li>
+                <div class="poster-image">
+                  <img src="/images/poster.jpg" alt="탑건-매버릭">
+                  <span class="age">
+                    <img src="/images/grade-12.png" alt="12세">
+                  </span>
+                  <div class="poster-button">
+                    <button>상세보기</button>
+                    <button class="ticketing">예매하기</button>
+                  </div>
+                </div>
+                <div class="poster-info">
+                  <h4 class="title">탑건-매버릭</h4>
+                  <span class="egg">
+                    <img src="/images/eggGoldenegggreat.png" alt="골든에그">
+                    95%
+                  </span>
+                  <span>예매율 45.5%</span>
+                </div>
+              </li>
+              <li>
+                <div class="poster-image">
+                  <img src="/images/poster.jpg" alt="탑건-매버릭">
+                  <span class="age">
+                    <img src="/images/grade-12.png" alt="12세">
+                  </span>
+                  <div class="poster-button">
+                    <button>상세보기</button>
+                    <button class="ticketing">예매하기</button>
+                  </div>
+                </div>
+                <div class="poster-info">
+                  <h4 class="title">탑건-매버릭</h4>
+                  <span class="egg">
+                    <img src="/images/eggGoldenegggreat.png" alt="골든에그">
+                    95%
+                  </span>
+                  <span>예매율 45.5%</span>
+                </div>
+              </li>
+              <li>
+                <div class="poster-image">
+                  <img src="/images/poster.jpg" alt="탑건-매버릭">
+                  <span class="age">
+                    <img src="/images/grade-12.png" alt="12세">
+                  </span>
+                  <div class="poster-button">
+                    <button>상세보기</button>
+                    <button class="ticketing">예매하기</button>
+                  </div>
+                </div>
+                <div class="poster-info">
+                  <h4 class="title">탑건-매버릭</h4>
+                  <span class="egg">
+                    <img src="/images/eggGoldenegggreat.png" alt="골든에그">
+                    95%
+                  </span>
+                  <span>예매율 45.5%</span>
+                </div>
+              </li>
+            </ul>
+            <a href="#" class="prev">이전</a>
+            <a href="#" class="next">다음</a>
+          </div>
         </div>
       </div>
     </div>
@@ -284,17 +994,18 @@
         <button class="all-view">전체보기</button>
       </div>
       <div class="slide-contents">
-        <a href="#" class="prev">이전</a>
         <div class="slide-list event-list">
           <ul>
             <li>
-              <div class="event-image">
-                <img src="/images/event.jpg" alt="[미니언즈2]필름마크">
-              </div>
-              <div class="event-info">
-                <h4>[미니언즈2]필름마크</h4>
-                <p class="date">2022.07.13~2022.08.07</p>
-              </div>
+              <a href="#">
+                <div class="event-image">
+                  <img src="/images/event.jpg" alt="[미니언즈2]필름마크">
+                </div>
+                <div class="event-info">
+                  <h4>[미니언즈2]필름마크</h4>
+                  <p class="date">2022.07.13~2022.08.07</p>
+                </div>
+              </a>
             </li>
             <li>
               <div class="event-image">
@@ -306,35 +1017,53 @@
               </div>
             </li>
             <li>
-              <div class="event-image">
-                <img src="/images/event.jpg" alt="[미니언즈2]필름마크">
-              </div>
-              <div class="event-info">
-                <h4>[미니언즈2]필름마크</h4>
-                <p class="date">2022.07.13~2022.08.07</p>
-              </div>
+              <a href="#">
+                <div class="event-image">
+                  <img src="/images/event.jpg" alt="[미니언즈2]필름마크">
+                </div>
+                <div class="event-info">
+                  <h4>[미니언즈2]필름마크</h4>
+                  <p class="date">2022.07.13~2022.08.07</p>
+                </div>
+              </a>
             </li>
             <li>
-              <div class="event-image">
-                <img src="/images/event.jpg" alt="[미니언즈2]필름마크">
-              </div>
-              <div class="event-info">
-                <h4>[미니언즈2]필름마크</h4>
-                <p class="date">2022.07.13~2022.08.07</p>
-              </div>
+              <a href="#">
+                <div class="event-image">
+                  <img src="/images/event2.jpg" alt="[미니언즈2]필름마크">
+                </div>
+                <div class="event-info">
+                  <h4>[미니언즈2]필름마크</h4>
+                  <p class="date">2022.07.13~2022.08.07</p>
+                </div>
+              </a>
             </li>
             <li>
-              <div class="event-image">
-                <img src="/images/event.jpg" alt="[미니언즈2]필름마크">
-              </div>
-              <div class="event-info">
-                <h4>[미니언즈2]필름마크</h4>
-                <p class="date">2022.07.13~2022.08.07</p>
-              </div>
+              <a href="#">
+                <div class="event-image">
+                  <img src="/images/event2.jpg" alt="[미니언즈2]필름마크">
+                </div>
+                <div class="event-info">
+                  <h4>[미니언즈2]필름마크</h4>
+                  <p class="date">2022.07.13~2022.08.07</p>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <div class="event-image">
+                  <img src="/images/event2.jpg" alt="[미니언즈2]필름마크">
+                </div>
+                <div class="event-info">
+                  <h4>[미니언즈2]필름마크</h4>
+                  <p class="date">2022.07.13~2022.08.07</p>
+                </div>
+              </a>
             </li>
           </ul>
+          <a href="#" class="prev">이전</a>
+          <a href="#" class="next">다음</a>
         </div>
-        <a href="#" class="next">다음</a>
       </div>
     </div>
   </section>
@@ -349,7 +1078,7 @@
       </div>
       <div class="hall-contents">
         <div class="hall-images">
-          <a href="#">
+          <a href="#" class="show">
             <img src="/images/special-hall1.png" alt="SUITE CINEMA">
           </a>
           <a href="#">
@@ -366,25 +1095,25 @@
           <li class="active">
             <a href="#">
               <h4>SUITE CINEMA</h4>
-              <p class="hall-tag">#호텔 컨셉의 프리미엄관</p>
+              <span class="hall-tag">#호텔 컨셉의 프리미엄관</span>
             </a>
           </li>
           <li>
             <a href="#">
               <h4>CINE & LIVINGROOM</h4>
-              <p class="hall-tag">#신개념 소셜 상영관</p>
+              <span class="hall-tag">#신개념 소셜 상영관</span>
             </a>
           </li>
           <li>
             <a href="#">
               <h4>4DX</h4>
-              <p class="hall-tag">#모션시트 #오감체험</p>
+              <span class="hall-tag">#모션시트 #오감체험</span>
             </a>
           </li>
           <li>
             <a href="#">
               <h4>CINE de CHEF</h4>
-              <p class="hall-tag">#쉐프가 있는 영화관</p>
+              <span class="hall-tag">#쉐프가 있는 영화관</span>
             </a>
           </li>
         </ul>
@@ -561,12 +1290,18 @@
           </div>
         </div>
         <div class="notice-client-banner">
-          <a href="#" class="banner-image">
-            <img src="/images/banner1.jpg" alt="배너1">
-          </a>
-          <a href="#" class="banner-image">
-            <img src="/images/banner2.png" alt="배너2">
-          </a>
+          <ul>
+            <li>
+              <a href="#" class="banner-image">
+                <img src="/images/banner1.jpg" alt="배너1">
+              </a>
+            </li>
+            <li>
+              <a href="#" class="banner-image">
+                <img src="/images/banner2.png" alt="배너2">
+              </a>
+            </li>
+          </ul>
           <div class="controll-btn">
             <button class="play"></button>
             <button class="pause"></button>
