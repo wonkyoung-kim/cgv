@@ -15,6 +15,15 @@ document.querySelector('.gnb').addEventListener('mouseleave', (e) => {
   document.querySelector('.sub-menu-wrap').style.height = '0px';
 })
 
+// 스크롤 내리면 메뉴 고정시키기
+document.addEventListener('scroll',()=>{
+  if(scrollY > 180) {
+    document.querySelector('.gnb').classList.add('fixed');
+  } else {
+    document.querySelector('.gnb').classList.remove('fixed');
+  }
+})
+
 // 비디오 컨트롤 버튼
 const video = document.querySelector('video');
 const playBtn = document.querySelector('.play');
